@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+ <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest"> <!--Här har jag lagt in texten för faviconen-->
+    <title>Hur man lagar pasta</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+<!-- En heading som vissar vilken mode det är(Dark Mode är av som standard) -->
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <!--Knapp som sätter igång dark mode funktionen när den klickas-->
+    <button onclick="darkMode()">Darkmode</button>
+    <!--Knapp som sätter igång Light mode funktionen när den klickas-->
+    <button onclick="lightMode()">LightMode</button>
+    <script>
+        // En funktion som sätter på dark mode
+        function darkMode() {
+            //Väljer body elementet på documentet 
+            let element = document.body;
+            // Väljer texten som vissar vilken mode det är 
+            let content = document.getElementById("DarkModetext");
+            // Lägger på dark mode css till body elementet 
+            element.className = "dark-mode";
+            // Byter texten som indikerar att dark mode är på
+            content.innerText = "Dark Mode is ON";
+        }
+        //Det som står under är samma prinicp som uppe fast för att säta på light mode
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Dark Mode is OFF";
+        }
+    </script>
+
+
+    <header>
+<img id="logotyp" src="jannes_pastastuga.png">
+</header>
+<div class="container">
+    <h1> Jannes Pastastuga - Pasta för alla</h1>
+   
+    <nav> <!--Här gör jag ett navigationsfält mellan de olika flikarna-->
+    <a href="receptcarbonara.html"> Recept - Pasta carbonara</a> |
+    <a href="receptvodkapasta.html">Recept - Vodkapasta</a> |
+    <a href="pastahistoria.html">Historia</a>
+</nav> <br>
+<h2> Vill du lära dig hur man lagar pasta som en kock? <br>
+    Då har du kommit till rätt ställe!</h2>
+    <img class="pastabildstartsida" src="olikapastasorter.jpg" alt="Bild på olika pasta sorter">
+
+<h2 class="underrubrik">Vilken av dessa pastarätter vill du se ett framtida recept på?</h2>
+
+<form id="radioboxar" action="radiosvar.php">
+ <input type="radio" id="alfredo" name="recept" value="alfredo">
+ <label for="alfredo">Pasta alfredo</label><br>
+ <input type="radio" id="lasagne" name="recept" value="lasagne">
+ <label for="lasagne">Lasagne</label><br>
+<input type="radio" id="pasticciata" name="recept" value="pasticciata">
+ <label for="pasticciata">Pasticciata</label><br>
+<input type="radio" id="bolognese" name="recept" value="bolognese">
+ <label for="bolognese">Pasta Bolognese</label><br><br>
+  <input type="submit" value="Skicka">
+    </form>
+<!--Här gjorde jag ett formulär i "radio"form med flersvarsalternativ och en en bekräftelse-->
+<h3 class="underrubrik">Fyll i formuläret nedan för att prenumerera på vårt nyhetsbrev</h3>
+
+<form action="nyhetsbrev.php" method="post"> <!--Här gör jag ett formulär för att fylla i namn och e-postadress enligt w3schools instruktioner-->
+<label for="Förnamn">Förnamn</label><br>
+<input type="text" id="Förnamn"><br>
+<label for="efternamn">Efternamn</label><br>
+<input type="text" id="efternamn"> <br>
+<label for="email">E-postadress</label><br>
+<input type="email" id="email" required><br><br>
+<input type="submit" value="Skicka">
+</form>
+
+
+    <footer>
+       <p> Skapad 2024-11-04 av Samuel Thorström och Sebastian Ballestros</p>
+
+        <a id="länkrutor" href="mailto:24sath4@suni.se"> Skicka ett mail till mig </a> <!--Länk till att skicka ett mail-->
+
+    </footer>
+</div>
+</body>
+</html>

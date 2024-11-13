@@ -1,0 +1,203 @@
+
+/* Här har jag markerat bodyn på varje sida och valt typsnitt, lagt in en bakgrundsbild och justerat så den är centrerad och täcker hela sidan*/
+body{font-family:'Franklin', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(pastabakgrundsbildistock.png);
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    
+    /* Lägger till ett inre avstånd (padding) på 25 pixlar */
+    padding: 25px;
+    /* Sätter bakgrundsfärgen till vit */
+    background-color: white;
+    /* Sätter textfärgen till svart */
+    color: black;
+    /* Sätter textstorleken till 25 pixlar */
+    font-size: 25px;
+
+   
+
+
+
+}
+/* Definierar stilen för dark-mode */
+.dark-mode {
+    background-color: black;
+        /* Sätter textfärgen till svart */
+    color: black;
+
+
+}
+/* Definierar stilen för light-mode */
+
+.light-mode {
+    background-color: white;
+    color: black;
+    
+}
+
+
+
+
+
+header{
+    display:flex;
+flex-direction: column;
+align-items: center;
+width: 60vw;
+margin: 0 auto;
+}
+#logotyp{
+    width:30vw;
+}
+
+/* Här har jag gjort en ruta med diverse attribut för att stilisera h1an på varje sida*/
+h1{
+    width:60vw;
+    border:solid;
+    border-color: black;
+    background-color: antiquewhite;
+    box-shadow: 2px 2px 2px 2px gray;
+    padding: 3px;
+   
+}
+/* Samma som h1 fast endast för h2an på index-sidan*/
+h2{
+    width: 60vw;
+    border: dashed 1px;
+    background-color: antiquewhite;
+    padding: 2px;
+    box-shadow: 2px 2px 2px 2px gray;  
+}
+
+/*Klassifierat alla h2or förutom den under h1an på index som .underrubrik för att de ska stiliseras på ett annat sätt*/
+.underrubrik{
+    width:60vw;
+    border: solid 2px black;
+    background-color:antiquewhite;
+    
+    padding: 5px;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+/*Klassifierat textstycket på historia-sidan för att enbart justera den längre brödtexten*/
+.textstycke{
+    font-size: 18px;
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+/*Navigationsfältet stiliserat med andra färger och mått än de övriga textrutorna*/
+nav{
+    width:100vw;
+    border: solid 2px;
+    border-color:black;
+    background-color:rgb(241, 237, 231);
+   
+    padding: 5px;
+    font-size: large;
+    font-stretch:wider;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+.pastabildstartsida{
+    width: 60vw;
+    height: fit-content;
+   
+border-style: double;
+border-top: 10px;
+border-bottom: 10px;
+box-shadow: 2px 2px 2px 2px gray;
+    
+}
+
+.receptbilder{
+    height: 375px;
+width: 500px;
+border-style: double;
+border-top: 10px;
+border-bottom: 10px;
+box-shadow: 2px 2px 2px 2px gray;
+}
+
+.historiebilder{
+    height: 325px;
+width: 500px;
+border-style: double;
+border-top: 10px;
+border-bottom: 10px;
+box-shadow: 2px 2px 2px 2px gray;
+}
+
+.logotyp{
+    width: 60vw;
+    height: 60vw;
+    margin-bottom: 0;
+
+}
+
+.container{
+display:flex;
+flex-direction: column;
+align-items: center;
+width: 60vw;
+margin: 0 auto;
+}
+
+#radioboxar{
+    text-align: left;
+}
+
+#checkboxar{
+    color:black;
+    text-align: left ;
+    width: 60vw;
+    border: dashed 1px;
+    background-color: antiquewhite;
+    padding: 2px ;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+form{
+    text-align: left;
+}
+ul{
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+#länkrutor
+{background-color:antiquewhite;
+    border: solid 2px black;
+    padding: 5px;
+    transition:background-color 0.5s;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+#länkrutor:hover{
+background-color: aliceblue;
+}
+
+
+/*Media query som minskar bildens storlek när webbplatsen når en view-width på 700px */
+@media screen and (max-width:700px){
+.pastabildstartsida{width: 200px;
+height: 125px;}
+}
+
+@media screen and (max-width:700px){
+    .receptbilder{width: 200px;
+    height: 125px}
+}
+
+/*Media query som minskar font-size på h1 och h2 när bildstorleken når en viss pixelnivå*/
+@media screen and (max-width:413px){
+h2{font-size: 16px;}
+
+}  
+
+@media screen and (max-width:550px){
+    h1{font-size: 20px;}
+} 

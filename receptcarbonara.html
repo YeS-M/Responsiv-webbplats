@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recept carbonara</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<!-- En heading som vissar vilken mode det är(Dark Mode är av som standard) -->
+<h3 id="DarkModetext">Dark Mode is OFF</h3>
+<!--Knapp som sätter igång dark mode funktionen när den klickas-->
+<button onclick="darkMode()">Darkmode</button>
+<!--Knapp som sätter igång Light mode funktionen när den klickas-->
+<button onclick="lightMode()">LightMode</button>
+<script>
+    // En funktion som sätter på dark mode
+    function darkMode() {
+        //Väljer body elementet på documentet 
+        let element = document.body;
+        // Väljer texten som vissar vilken mode det är 
+        let content = document.getElementById("DarkModetext");
+        // Lägger på dark mode css till body elementet 
+        element.className = "dark-mode";
+        // Byter texten som indikerar att dark mode är på
+        content.innerText = "Dark Mode is ON";
+    }
+    //Det som står under är samma prinicp som uppe fast för att säta på light mode
+    function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+    }
+</script>
+
+
+    <header>
+        <img id="logotyp" src="jannes_pastastuga.png">
+        </header>
+    <div class="container">
+    <h1 id="sidtopp"> Carbonara</h1> <!--Den här raden arbetar med <a href="#sidtopp">Gå till sidans topp</a> för att länka till ett annat ställe på sidan-->
+    <nav>
+        <a href="index.html">Startsida</a> |
+        <a href="receptvodkapasta.html">Recept - Vodkapasta</a> |
+        <a href="pastahistoria.html">Historia</a>
+    </nav> <br> <!--Navigationsfält-->
+<h2 class="underrubrik">Ingredienser - 4 Personer</h2> 
+<!--Här har jag gjort en ul lista i punktform med li-->
+    <ul>    
+<li>4 port spaghetti</li>
+<li>2 förp bacon (á 140g)</li>
+<li>4 ägg</li>
+<li>1 dl vispgrädde</li>
+<li>2 dl riven parmesan</li>
+<li>1/2 tsk salt</li>
+<li>2 krm nymalen svartpeppar</li>
+    </ul>
+
+
+<h2 class="underrubrik">Gör så här</h2> 
+<!--Här har jag gjort en lista med checkboxar enl. w3schools instruktioner-->
+<form id="checkboxar">
+    <input type="checkbox">Koka spaghettin enligt anvisningen på förpackningen.<br>
+    <input type="checkbox">Klipp bacon i ca 2 cm stora bitar. Stek baconbitarna knapriga i en stekpanna.<br>                      
+    <input type="checkbox">Vispa ihop ägg, grädde, parmesanost, salt och svartpeppar i en bunke.<br>
+    <input type="checkbox">Häll av pastan och häll tillbaka den i kastrullen, vänd ner äggblandningen och det stekta baconet.<br>
+    <input type="checkbox">Rör runt på svag värme till en krämig pasta.<br>
+    <input type="checkbox">Till servering: Servera carbonaran toppad med rucola och dra några extra tag med pepparkvarnen över.<br>
+</form><br>
+
+    
+<img class="receptbilder" src="carbonara.jpg" alt="Bild på Pasta carbonara" height="350" width="450"><br>
+
+
+<footer>
+    <a href="#sidtopp">Gå till sidans topp</a> <!--Denna länk är kopplad till h1 rubriken-->
+</footer>
+</div>
+</body>
+</html>

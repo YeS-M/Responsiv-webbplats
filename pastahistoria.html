@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastans Historia</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<!-- En heading som vissar vilken mode det är(Dark Mode är av som standard) -->
+<h3 id="DarkModetext">Dark Mode is OFF</h3>
+<!--Knapp som sätter igång dark mode funktionen när den klickas-->
+<button onclick="darkMode()">Darkmode</button>
+<!--Knapp som sätter igång Light mode funktionen när den klickas-->
+<button onclick="lightMode()">LightMode</button>
+<script>
+    // En funktion som sätter på dark mode
+    function darkMode() {
+        //Väljer body elementet på documentet 
+        let element = document.body;
+        // Väljer texten som vissar vilken mode det är 
+        let content = document.getElementById("DarkModetext");
+        // Lägger på dark mode css till body elementet 
+        element.className = "dark-mode";
+        // Byter texten som indikerar att dark mode är på
+        content.innerText = "Dark Mode is ON";
+    }
+    //Det som står under är samma prinicp som uppe fast för att säta på light mode
+    function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+    }
+</script>
+
+    <header>
+        <img id="logotyp" src="jannes_pastastuga.png">
+        </header>
+    <div class="container">
+ <h1>Historien om Pasta</h1>
+ <nav> <!--Navigationsfält mellan de olika sidorna enligt instruktioner-->
+    <a href="index.html">Startsida</a> |
+    <a href="receptvodkapasta.html">Recept - Vodkapasta</a> |
+    <a href="receptcarbonara.html">Recept - carbonara</a>
+</nav> <br>
+<div class="textstycke">
+ <p><Strong> <i>Pasta</i></Strong> har funnits i olika former genom historien och kan spåras 7000 år tillbaka i tiden. <br>
+ Araberna tillverkade torkad pasta på 800-talet för att det skulle hålla under långa resor, men det var först på 1000-talet i Palermo, 
+ Italien som pasta började produceras av hantverkare.
+ Till att börja med en exotisk rätt, först på 1600-talet blev pasta basmat i Italien.</p>
+
+<strong>Visste du detta om pasta?</strong><br>
+Pasta?
+Ordet pasta härstammar från grekiskans kornmjölsgröt. På italienska betyder det deg - rätt och slätt!
+
+Sverigedebuten
+Pastan tog sig till Sverige via det franska hovet redan på 1600-talet. 
+I Cajsa Wargs Hjelpreda i hushållningen för unga fruentimber från 1755 hittas det äldsta bevarade pastareceptet, 
+där makaronerna ska kokas i köttsoppa, och sedan stuvas med riven ost och muskot.
+<!--Textruta-->
+
+<p>Pasta betyder på italienska deg och består av mjöl, vatten eller ägg. </p>
+I färsk pasta, typiskt för Norditalien, är ägg vanligast, medan i torkad pasta, som är vanlig i Syditalien, 
+används oftast bara vatten. I vissa recept tillsätts även salt och olja till degen.</p>
+ </div>
+
+<img class="historiebilder" src="pastanshistoria.jpg" alt="Historisk Bild" height="200" width="375"> 
+<img class="historiebilder" src="pastanshistoria2.jpg" alt="Historisk bild" height="200" width="375">
+<img class="historiebilder" src="pastanshistoria3.jpg" alt="Historisk bild" height="200" width="375"> <br>
+<!--Bilder infogade och storleksjusterade-->
+
+
+
+<!--video som går att spela på hemsidan-->
+<iframe width="420" height="345"  src="https://www.youtube.com/embed/AMtPGSZIppE" >
+  <!--Video som tar en till youtube frö att-->
+
+</iframe>
+<a id="länkrutor" href="https://www.youtube.com/watch?v=AMtPGSZIppE">Se mer om pastans historia</a> <!--Extern länk till en youtube video-->
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recept Vodkapasta</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+
+<!-- En heading som vissar vilken mode det är(Dark Mode är av som standard) -->
+<h3 id="DarkModetext">Dark Mode is OFF</h3>
+<!--Knapp som sätter igång dark mode funktionen när den klickas-->
+<button onclick="darkMode()">Darkmode</button>
+<!--Knapp som sätter igång Light mode funktionen när den klickas-->
+<button onclick="lightMode()">LightMode</button>
+<script>
+    // En funktion som sätter på dark mode
+    function darkMode() {
+        //Väljer body elementet på documentet 
+        let element = document.body;
+        // Väljer texten som vissar vilken mode det är 
+        let content = document.getElementById("DarkModetext");
+        // Lägger på dark mode css till body elementet 
+        element.className = "dark-mode";
+        // Byter texten som indikerar att dark mode är på
+        content.innerText = "Dark Mode is ON";
+    }
+    //Det som står under är samma prinicp som uppe fast för att säta på light mode
+    function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+    }
+</script>
+
+
+    <header>
+        <img id="logotyp" src="jannes_pastastuga.png">
+        </header>
+    <div class="container">
+    <h1 id="sidtopp">Vodkapasta</h1>
+    <!--Här har jag gjort ett navigationsfält så man kan hoppa mellan de olika sidorna-->
+    <nav>
+        <a href="index.html">Startsida</a> |
+        <a href="receptcarbonara.html">Recept - Carbonara</a> |
+        <a href="pastahistoria.html">Historia</a>
+    </nav> <br>
+    <h2 class="underrubrik">Ingredienser - 4 Personer</h2>
+    <ul> <!--Lista skapad med ul och i li format-->
+<li>3 Vitlöksklyftor</li>
+<li>2 msk olivolja</li>
+<li>1 dl tomatpuré</li>
+<li>1/2 tsk chiliflakes</li>
+<li>1/2 dl vodka</li>
+<li>2 1/2 dl vispgrädde</li>
+<li>salt</li>
+<li>svartpeppar</li>
+<li>4 port pasta (t ex penne)</li>
+    </ul>
+
+<h2 class="underrubrik">Gör så här</h2>
+<!--Här har jag gjort som på sidan för carbonara med en checkbox lista enligt w3s instruktioner-->
+<form id="checkboxar">
+<input type="checkbox">Skala och hacka vitlöken. Fräs i oljan tills den får lite färg. <br>
+<input type="checkbox">Tillsätt tomatpuré och chiliflakes och fräs ytterligare ca 5 minuter på medelvärme. 
+Häll i vodkan och låt koka någon minut. <br>
+<input type="checkbox">Rör ner grädden och låt koka ihop. Smaka av med salt och peppar. <br>
+<input type="checkbox">Koka pastan enligt anvisning på förpackningen. Häll av och spar 1-2 dl av pastavattnet (för 4 port).
+Rör ner pastan. Tillsätt lite pastavatten i taget rör till önskad konsistens.</form> <br>
+
+<img class="receptbilder" src="vodkapasta.jpg" alt="Bild på Vodkapasta" height="350" width="350"><br>
+
+<footer>
+    <a href="#sidtopp">Gå till sidans topp</a> <!--Denna länk är kopplad till h1 rubriken-->
+</footer>
+</div>
+</body>
+</html>
